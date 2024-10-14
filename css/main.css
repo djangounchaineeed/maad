@@ -133,8 +133,7 @@ a .buton {
 }
 
 .main {
-    width: 80%;
-    margin: 1% 10%;
+    width: 100%;
 }
 
 .f {
@@ -257,10 +256,13 @@ a .buton {
 }
 
 .wwd {
-    margin: 0 110px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: center;
 }
+
 
 .blockwwd {
     width: 249px;
@@ -273,6 +275,7 @@ a .buton {
 }
 
 .txtwwd {
+    font-family: "Montserrat", sans-serif;
     display: flex;
     width: 250px;
     height: 220px;
@@ -282,6 +285,11 @@ a .buton {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.txtwwd>h3 {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .txtwwd>p {
@@ -328,9 +336,9 @@ a .buton {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: space-between;
+    align-content: space-around;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .gaqimg {}
@@ -338,23 +346,131 @@ a .buton {
 .form {}
 
 .name {
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.fname {}
+.fname {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
 
-.sname {}
+.fname input {
+    border-radius: 5px;
+    border: gray solid 1px;
+    height: 30px;
+}
 
-.en {}
+.sname {
+    width: 45%;
 
-.email {}
+    display: flex;
+    flex-direction: column;
+}
+
+.sname input {
+    border-radius: 5px;
+    border: gray solid 1px;
+    height: 30px;
+}
+
+.en {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.en input {
+    border-radius: 5px;
+    border: gray solid 1px;
+    height: 30px;
+}
+
+.email {
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+}
 
 
-.number {}
+.number {
+    width: 45%;
 
-.tos {}
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.tos {
+    margin: 14px 0px;
+}
+
+.types {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.type>label {
+    margin: 0 5px;
+}
+
+.lastin {
+    display: flex;
+    margin: 15px 0;
+}
+
+.subm {
+    background-color: var(--bluel);
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.subm>a {
+    position: relative;
+    top: 8px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
 
 .com {}
+
+.com input {
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    border: gray solid 1px;
+    height: 100px;
+}
 
 .boxwrap {
     display: flex;
