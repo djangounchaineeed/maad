@@ -24,13 +24,17 @@ body li a {
     list-style: none;
 }
 
+._container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 header {
     width: 100%;
-    height: 10%;
 }
 
 .supheader {
-    height: 25%;
     background-color: var(--bluel);
     color: white;
     float: right;
@@ -38,41 +42,39 @@ header {
 }
 
 .headcontacts {
-    position: relative;
-    bottom: 8px;
-    width: 30%;
-    margin: 0 69px;
-    float: right;
     display: flex;
-    width: 30%;
-    align-content: center;
-    flex-wrap: wrap;
     flex-direction: row;
-    align-items: baseline;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
 }
+
 
 .phone {
-    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.phoneimg {
-    position: relative;
-    top: 2px;
-}
+.phoneimg {}
 
 .mail {
-    width: 50%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.mailimg {
-    position: relative;
-    top: 10px;
-}
+
+.mailimg {}
 
 .subheader {
     width: 100%;
-    height: 75%;
     background-color: var(--gray);
     color: black;
     display: flex;
@@ -82,31 +84,42 @@ header {
     align-items: center;
 }
 
-.logo {
-    margin: 10px 50px;
-    width: 30%;
+@media (max-width:600px) {
+    .subheader {
+        flex-direction: column;
+    }
+
+    .imageess {
+        flex-direction: column;
+    }
 }
 
-.nav {
-    width: 65%;
+.logo {
+    margin: 10px 0;
+    margin: 10px 0px;
 }
+
+.nav {}
 
 .nav ul {
+    padding: 10px 0;
     list-style: none;
     text-decoration: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: center;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 .nav>ul>li>a:not(.buton) {
+    padding: 0 10px;
     font-weight: 500;
     list-style: none;
     color: black;
 }
+
 
 .buton {
     color: white;
@@ -145,7 +158,6 @@ a .buton {
     text-align: center;
     background-image: url(/img/Header\ Background\ \(2\).png);
     background-repeat: no-repeat;
-    background-size: 100%;
     height: 638px;
 }
 
@@ -195,24 +207,24 @@ a .buton {
 }
 
 .imagesf {
+    padding: 50px 0;
     width: 100%;
-    height: 400px;
     background: #0D6D96;
 
 }
 
 .imageess {
-    position: relative;
-    top: 80px;
     display: flex;
-    /* flex-wrap: nowrap; */
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
 }
 
-.oneimg {
-    width: 300px;
-    height: 238px;
+.imageess img {
+    height: 165px;
+    width: 200px;
 }
 
 .main>h1 {
@@ -228,7 +240,6 @@ a .buton {
 
 .wws {
     width: 100%;
-    height: 500px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -239,12 +250,12 @@ a .buton {
 }
 
 .blockwws {
+    margin: 10px 0;
     box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, .5);
     display: flex;
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     border: #F3F3F3 1px solid;
-    box-shadow: darkgray;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
@@ -259,7 +270,7 @@ a .buton {
 .wwd {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
 }
@@ -300,7 +311,6 @@ a .buton {
 .wwrap {
     display: flex;
     width: 100%;
-    height: 400px;
     text-align: center;
     background-color: var(--gray);
     align-content: flex-end;
@@ -311,9 +321,8 @@ a .buton {
 }
 
 .wwrap h1 {
-    position: relative;
-    top: 30px;
-    font-size: 48px;
+    padding: 20px 0;
+    font-size: 40px;
     font-weight: 400;
     text-align: center;
     color: black;
@@ -345,13 +354,21 @@ a .buton {
     align-items: center;
     justify-content: space-evenly;
 }
+
+.gaq img {
+    width: 40%;
+    height: 100%;
+}
+
 span {
     font-weight: 600;
 }
 
 .gaqimg {}
 
-.form {}
+.form {
+    padding: 15px 15px;
+}
 
 .name {
     width: 100%;
@@ -486,7 +503,6 @@ span {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 600px;
     background-color: var(--gray);
 }
 
@@ -534,7 +550,6 @@ footer {
     font-weight: 400;
     font-style: normal;
     margin: 50px;
-    height: 350px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -543,6 +558,13 @@ footer {
     align-items: flex-start;
     text-decoration: none;
     list-style: none;
+}
+
+ 
+
+.imgfoot {
+    max-width: 100%;
+
 }
 
 .git>a footer ul li a {
@@ -560,6 +582,15 @@ footer ul li a {
     text-decoration: none;
     list-style: none;
 }
+
+@media (max-width:600px) {
+    footer ul li a {
+       
+        font-size: 14px;
+        
+    }
+}
+
 
 footer ul li {
     margin: 10px;
